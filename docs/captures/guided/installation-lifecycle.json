@@ -1,0 +1,11 @@
+{
+  "clean-install": "passed",
+  "concurrent-launches": "passed: both commands reuse one app process",
+  "working-slice-health": "passed",
+  "repeat-install": "passed",
+  "credentials-preserved": "passed: repeat install retains generated credential",
+  "stop-without-docker": "passed",
+  "restart-without-docker": "passed",
+  "headless-launcher": "passed",
+  "docker-or-group-commands": "zero invocations in recorded installation, launch, health, reinstall, stop and restart"
+}

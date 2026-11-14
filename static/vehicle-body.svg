@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 60 640 360" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Generic SUV body on an assembly fixture</title>
+  <desc id="description">Original illustrative body in white with a blue Station 40 fixture bracket callout. Not engineering CAD or an actual vehicle design.</desc>
+  <g stroke="#8795B5" stroke-width="1">
+    <path d="M57 353H737M82 387H762M112 329L174 411M263 329L325 411M414 329L476 411M565 329L627 411" stroke-dasharray="3 7"/>
+    <path d="M102 69V94M90 82H115M697 304V329M685 317H710"/>
+  </g>
+  <g stroke="#000" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M120 337H646L628 371H102L120 337Z" fill="#FFFFFF" stroke-width="1.4"/>
+    <path d="M102 371V387H628V371M646 337V353L628 387M240 346L230 367M504 346L494 367" stroke-width="1.2"/>
+    <path d="M172 299V337H203V298M356 300V337H387V299M558 297V337H586V295" fill="#FFFFFF" stroke-width="1.5"/>
+    <path d="M133 253L143 191Q158 167 198 161L248 88Q258 77 288 77H428Q451 80 475 113L520 163L602 178Q632 186 643 214L653 256L613 262Q608 210 560 210Q511 210 506 262H267Q260 215 216 215Q169 215 166 262Z" stroke="#8795B5" stroke-width="1.2"/>
+    <path d="M183 291L141 253M239 126L248 88M271 115L288 77M423 115L428 77M468 151L475 113M508 203L520 163M593 218L602 178M636 253L643 214" stroke="#8795B5" stroke-width="1.1"/>
+    <path d="M239 126L248 88Q258 77 288 77H428L423 115H271Q250 115 239 126Z" fill="#FFFFFF" stroke-width="1.4"/>
+    <path d="M423 115L428 77Q451 80 475 113L468 151Z" fill="#FFFFFF" stroke-width="1.4"/>
+    <path d="M508 203L520 163L602 178L593 218Z" fill="#FFFFFF" stroke-width="1.4"/>
+    <path d="M116 299L126 237Q141 213 181 205L231 126Q241 115 271 115H423Q446 118 470 151L509 203L593 218Q622 226 633 254L643 296L601 302Q598 248 550 248Q501 248 498 302H260Q257 251 210 251Q163 251 160 302Z" fill="#FFFFFF" stroke-width="2.3"/>
+    <path d="M246 137L226 201L249 220L270 282H322V136H271Q254 136 246 137Z" fill="#D1DDF1" stroke-width="1.5"/>
+    <path d="M343 137V282H480V202L438 150Q425 136 409 137Z" fill="#D1DDF1" stroke-width="1.5"/>
+    <path d="M358 150V269H466V204L428 159Q420 150 407 150Z" stroke="#8795B5" stroke-width="1"/>
+    <path d="M250 146L238 195L260 215L281 271H312V145M322 210V291M341 211V291M483 211L490 285M181 215L167 241M273 290H482" stroke-width="1.2"/>
+    <path d="M251 241H478M283 257H478M358 166L467 251M466 201L358 268" stroke="#8795B5" stroke-width="1" stroke-dasharray="4 5"/>
+    <path d="M173 299Q175 263 210 263Q245 263 247 299M510 300Q514 261 550 261Q586 261 588 300M130 259H152M615 258H632" stroke="#8795B5" stroke-width="1.1"/>
+    <path d="M276 313H480M295 308V320M461 308V320M125 302L142 313H158M602 312H631L643 296" stroke-width="1.1"/>
+  </g>
+  <g stroke="#004BDF" stroke-width="2">
+    <path d="M353 313H399V340H353Z" fill="#D1DDF1"/>
+    <path d="M353 313L365 304H411V331L399 340M399 313L411 304"/>
+    <circle cx="365" cy="323" r="3" fill="#004BDF"/>
+    <circle cx="387" cy="323" r="3" fill="#004BDF"/>
+    <circle cx="365" cy="333" r="3" fill="#004BDF"/>
+    <circle cx="387" cy="333" r="3" fill="#004BDF"/>
+    <path d="M411 322L477 399H615"/>
+    <path d="M390 291V280M423 307H435M341 307H329M390 352V364" stroke-width="1.2"/>
+    <circle cx="390" cy="322" r="35" stroke-dasharray="3 5" stroke-width="1"/>
+  </g>
+  <text x="626" y="405" fill="#004BDF" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">S40</text>
+</svg>

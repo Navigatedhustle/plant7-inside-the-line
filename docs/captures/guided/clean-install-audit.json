@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "guided_path": "Four main-button clicks: local investigation or explicit recording, source playback, exact scope, decision and token economics",
+    "token_usage": {
+      "mode": "recorded",
+      "input": 11075,
+      "output": 610,
+      "scope": "Generation calls only: SQL worker, synthesis and audit; excludes embedding and reranking tokens.",
+      "arithmetic": "zero rates, changed volume and invalid input verified"
+    },
+    "impactful_details": "Exception unit passport, exact cohort, named simulated hold and reviewable exports",
+    "refresh": "Chapter, run and exact simulated hold set survive refresh",
+    "fit_1920x1080": "All five steps: no page, evidence-panel or value-card scrolling; main action visible",
+    "fit_1440x900": "All five steps: no page, evidence-panel or value-card scrolling; main action visible",
+    "fit_1366x768": "All five steps: no page, evidence-panel or value-card scrolling; main action visible",
+    "fit_1280x720": "All five steps: no page, evidence-panel or value-card scrolling; main action visible",
+    "following_views": "Wall remains read only; mobile loads no 3D assets or stage controls",
+    "recorded_mode": "Recording chosen before the first step; persistent label and historical token basis",
+    "webgl_fallback": "2D source inspection works without WebGL"
+  },
+  "page_errors": [],
+  "external_requests": [],
+  "base": "http://127.0.0.1:18098"
+}

@@ -1,0 +1,5 @@
+timestamp,line,station,asset_id,action,note
+2026-11-09 09:15:00,3,40,T40-B,recalibration,Angle channel recalibrated. Tool returned at 10:05. Reference fixture confirmation not attached to job card. Torque program unchanged.
+2026-11-11 05:30:00,3,40,T40-B,reference_verification,Reference fixture found angle zero offset high. Offset corrected and reference check accepted. Quality released tool at 06:00. Prior suspect unit dispositions remain open.
+2026-11-10 14:25:00,2,30,C2,jam_clear,18 min conveyor jam. Local drive only. Line 3 unaffected.
+2026-11-08 07:20:00,1,10,F10,lubrication,Routine service. Reference checks accepted.

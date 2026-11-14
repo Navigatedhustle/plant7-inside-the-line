@@ -1,0 +1,33 @@
+{
+  "file": "inside-line.mp4",
+  "synthetic": true,
+  "source_started_at": "2026-11-10T14:42:38Z",
+  "unit_id": "P7-20261110-32-0021",
+  "component_id": "L3-S40-BRACKET-B7",
+  "duration_seconds": 10,
+  "fps": 10,
+  "author_annotations": [
+    {
+      "offset_seconds": 3,
+      "fastener_id": "B1",
+      "kind": "manually authored socket contact, not model detection"
+    },
+    {
+      "offset_seconds": 4,
+      "fastener_id": "B2",
+      "kind": "manually authored socket contact, not model detection"
+    },
+    {
+      "offset_seconds": 5,
+      "fastener_id": "B3",
+      "kind": "manually authored socket contact, not model detection"
+    },
+    {
+      "offset_seconds": 6,
+      "fastener_id": "B4",
+      "kind": "manually authored socket contact, not model detection"
+    }
+  ],
+  "alignment": "Authored to existing telemetry timestamps. Not measured camera synchronization.",
+  "vlm_input_policy": "Only MP4 pixels and neutral question. Do not supply this sidecar as evidence of model accuracy."
+}

@@ -1,0 +1,87 @@
+{
+  "status": "four_roles_inference_benchmarked_cosmos_gated_full_stack_acceptance_pending",
+  "image": "vllm/vllm-openai@sha256:851ef53f3318114d3b93d5fe6f075069d91b7e88d4694cff1e165ef0b903b906",
+  "image_tag": "nightly-aarch64, resolved 2026-11-13",
+  "models": [
+    {
+      "role": "brain",
+      "repo": "nvidia/Qwen3.8-Flash-Next-NVFP4",
+      "revision": "fc694b54fb0174e0913e6adf86691ef85a4ead47",
+      "port": 8001,
+      "gpu_fraction": 0.64,
+      "max_model_len": 262144,
+      "max_num_seqs": 20,
+      "weight_bytes": 132680249378,
+      "reasoning_parser": "qwen3",
+      "tool_parser": "qwen3_coder",
+      "kv_dtype": "fp8",
+      "enabled": true
+    },
+    {
+      "role": "vision",
+      "repo": "nvidia/Cosmos-Reason2-8B",
+      "revision": "a9fae2cf89dc64db96b12860417f0eb403013bb9",
+      "port": 8002,
+      "gpu_fraction": 0.14,
+      "max_model_len": 16384,
+      "max_num_seqs": 4,
+      "weight_bytes": 17534339368,
+      "reasoning_parser": "qwen3",
+      "gated": true,
+      "enabled": true
+    },
+    {
+      "role": "worker",
+      "repo": "nvidia/Qwen3.8-27B-NVFP4",
+      "revision": "482ca0f3832238542f8f5295dde86b5f22711d80",
+      "port": 8003,
+      "gpu_fraction": 0.12,
+      "max_model_len": 8192,
+      "max_num_seqs": 20,
+      "weight_bytes": 21921697280,
+      "reasoning_parser": "qwen3",
+      "tool_parser": "qwen3_coder",
+      "kv_dtype": "fp8_e4m3",
+      "selection": "selected_accuracy_first_20_of_20_vs_19_of_20",
+      "enabled": true
+    },
+    {
+      "role": "embed",
+      "repo": "Qwen/Qwen3-Embedding-0.6B",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "port": 8004,
+      "gpu_fraction": 0.01,
+      "max_model_len": 2048,
+      "max_num_seqs": 4,
+      "weight_bytes": 1191586416,
+      "runner": "pooling",
+      "enabled": true
+    },
+    {
+      "role": "rerank",
+      "repo": "Qwen/Qwen3-Reranker-0.6B",
+      "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+      "port": 8005,
+      "gpu_fraction": 0.01,
+      "max_model_len": 2048,
+      "max_num_seqs": 4,
+      "weight_bytes": 1191588280,
+      "runner": "pooling",
+      "enabled": true
+    }
+  ],
+  "challenger_worker": {
+    "repo": "openai/gpt-oss-120b",
+    "revision": "b5c939de8f754692c1647ca79fbf85e8c1e70f8a",
+    "weight_bytes": 65248893184,
+    "port": 8003,
+    "gpu_fraction": 0.29,
+    "max_model_len": 8192,
+    "max_num_seqs": 8
+  },
+  "notes": [
+    "Fractions total 0.92. Do not swap the worker to gpt-oss without recomputing the whole lineup.",
+    "Rerank is internal on 8005; embed endpoint gateway exposes rerank via application routes.",
+    "No runtime support or speed claim until image and model smoke tests pass."
+  ]
+}

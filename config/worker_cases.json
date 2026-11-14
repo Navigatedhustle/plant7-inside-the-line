@@ -1,0 +1,22 @@
+[
+ {"question":"How many units are in the entire units table?","sql":"SELECT count(*) FROM units"},
+ {"question":"What was Line 3 first pass yield on 2026-11-10 shift 2? Return fpy_pct only.","sql":"SELECT fpy_pct FROM first_pass_yield WHERE line=3 AND production_date=DATE '2026-11-10' AND shift=2"},
+ {"question":"Return shift and fpy_pct for all Line 3 shifts on 2026-11-10.","sql":"SELECT shift,fpy_pct FROM first_pass_yield WHERE line=3 AND production_date=DATE '2026-11-10'"},
+ {"question":"What was Line 2 first pass yield on 2026-11-10 shift 2? Return fpy_pct only.","sql":"SELECT fpy_pct FROM first_pass_yield WHERE line=2 AND production_date=DATE '2026-11-10' AND shift=2"},
+ {"question":"Return first_pass_units for Line 3 on 2026-11-10 shift 2.","sql":"SELECT first_pass_units FROM first_pass_yield WHERE line=3 AND production_date=DATE '2026-11-10' AND shift=2"},
+ {"question":"How many units were built on Line 3 on 2026-11-10 shift 2?","sql":"SELECT count(*) FROM units WHERE line=3 AND production_date=DATE '2026-11-10' AND shift=2"},
+ {"question":"How many defects were recorded on Line 3 during 2026-11-10 shift 2? Use defects joined to units for production_date.","sql":"SELECT count(*) FROM defects d JOIN units u USING(unit_id) WHERE d.line=3 AND d.shift=2 AND u.production_date=DATE '2026-11-10'"},
+ {"question":"Return tool_id and mean angle rounded to 2 decimal places on Line 3 during production_date 2026-11-10. Join units for the date.","sql":"SELECT t.tool_id,round(avg(t.angle_deg),2) FROM torque_results t JOIN units u USING(unit_id) WHERE t.line=3 AND u.production_date=DATE '2026-11-10' GROUP BY t.tool_id"},
+ {"question":"Return tool_id and mean actual_nm rounded to 2 decimals on Line 3 during production_date 2026-11-10.","sql":"SELECT t.tool_id,round(avg(t.actual_nm),2) FROM torque_results t JOIN units u USING(unit_id) WHERE t.line=3 AND u.production_date=DATE '2026-11-10' GROUP BY t.tool_id"},
+ {"question":"Count distinct shipped unit IDs on Line 3 that used T40-B, for production dates 2026-11-09 through 2026-11-10 inclusive.","sql":"SELECT count(DISTINCT u.unit_id) FROM units u JOIN torque_results t USING(unit_id) WHERE u.line=3 AND t.tool_id='T40-B' AND u.status='shipped' AND u.production_date BETWEEN DATE '2026-11-09' AND DATE '2026-11-10'"},
+ {"question":"List distinct shipped unit IDs on Line 3 that used T40-B on production_date 2026-11-10. Return IDs only.","sql":"SELECT DISTINCT u.unit_id FROM units u JOIN torque_results t USING(unit_id) WHERE u.line=3 AND t.tool_id='T40-B' AND u.status='shipped' AND u.production_date=DATE '2026-11-10'"},
+ {"question":"Return supplier_lot and count of units for Line 1, grouped by lot.","sql":"SELECT supplier_lot,count(*) FROM units WHERE line=1 GROUP BY supplier_lot"},
+ {"question":"Return duration_minutes and reason for Line 2 shift 2 downtime starting on 2026-11-10.","sql":"SELECT duration_minutes,reason FROM downtime WHERE line=2 AND shift=2 AND start_time>=CAST('2026-11-10' AS TIMESTAMP) AND start_time<CAST('2026-11-11' AS TIMESTAMP)"},
+ {"question":"How many Line 3 Station 40 defects were associated with units on production_date 2026-11-10?","sql":"SELECT count(*) FROM defects d JOIN units u USING(unit_id) WHERE d.line=3 AND d.station=40 AND u.production_date=DATE '2026-11-10'"},
+ {"question":"Count TRIM_FIT defects on Line 3 for production_date 2026-11-10 shift 2.","sql":"SELECT count(*) FROM defects d JOIN units u USING(unit_id) WHERE d.line=3 AND d.shift=2 AND d.code='TRIM_FIT' AND u.production_date=DATE '2026-11-10'"},
+ {"question":"Return shift and fpy_pct on Line 3 for Monday 2026-11-09.","sql":"SELECT shift,fpy_pct FROM first_pass_yield WHERE line=3 AND production_date=DATE '2026-11-09'"},
+ {"question":"Return the tool_id with the highest average angle on Line 3 for production_date 2026-11-10 shift 2. Only the ID.","sql":"SELECT t.tool_id FROM torque_results t JOIN units u USING(unit_id) WHERE t.line=3 AND t.shift=2 AND u.production_date=DATE '2026-11-10' GROUP BY t.tool_id ORDER BY avg(t.angle_deg) DESC LIMIT 1"},
+ {"question":"How many station events belong to unit P7-20261110-32-0021?","sql":"SELECT count(*) FROM station_events WHERE unit_id='P7-20261110-32-0021'"},
+ {"question":"Return distinct tool_id values used at Station 40 on Line 3.","sql":"SELECT DISTINCT tool_id FROM torque_results WHERE line=3 AND station=40"},
+ {"question":"What is the minimum fpy_pct recorded on Line 3 over the full dataset?","sql":"SELECT min(fpy_pct) FROM first_pass_yield WHERE line=3"}
+]

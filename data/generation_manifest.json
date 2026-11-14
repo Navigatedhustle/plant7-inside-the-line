@@ -1,0 +1,18 @@
+{
+  "seed": 70040,
+  "start_date": "2026-10-30",
+  "days": 14,
+  "incident_date": "2026-11-10",
+  "scenario_as_of": "2026-11-13T18:00:00Z",
+  "fixture_version": 2,
+  "time_basis": "UTC",
+  "counts": {
+    "units": 33600,
+    "station_events": 302400,
+    "torque_results": 134400,
+    "defects": 1352,
+    "downtime": 168,
+    "first_pass_yield": 168
+  },
+  "fictional": true
+}

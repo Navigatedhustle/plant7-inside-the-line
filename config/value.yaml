@@ -1,0 +1,41 @@
+label: illustrative assumption, edit before use
+manual_investigation_minutes: 180
+acceptance_target_seconds: 120
+comparison_scope: Illustrative manual workflow versus this demo's measured attempt; time savings are not validated.
+manual_workflow:
+  - task: Establish the yield loss
+    before: Export MES records and rebuild the line and shift comparison.
+    after: Run a read-only scope query and inspect the chart and returned rows.
+    decision: Where and when did the loss start?
+    source: data
+  - task: Trace the fastening exceptions
+    before: Join body serials, tool records and individual bolt exports.
+    after: Open one unit passport with recorded torque, angle, route and shipping state.
+    decision: Which recorded bodies need a Quality review?
+    source: passport
+  - task: Check the process requirement
+    before: Find the current WI, PFMEA and maintenance record and reconcile versions.
+    after: Retrieve cited passages and cross-check complete local documents.
+    decision: What was required and what change was actually recorded?
+    source: docs
+  - task: Verify the visible sequence
+    before: Scrub station footage and compare bolt order with the instruction.
+    after: Use local vision to retrieve clips and check the visible sequence at a timestamp.
+    decision: Does observed work match the required star pattern?
+    source: video
+  - task: Define the containment review
+    before: Reconcile serial lists, maintenance exposure and shipped or held records.
+    after: Link source queries and records for a scoped human review.
+    decision: What additional scope and verification does Quality need?
+    source: scope
+  - task: Prepare the handoff
+    before: Assemble an 8D draft and copy its supporting evidence.
+    after: Generate a proposed cited 8D once the required evidence is complete.
+    decision: Can the next team inspect every claim and open check?
+    source: report
+planned_brain_kv_gb: 20
+planned_vision_kv_gb: 8
+planned_worker_kv_gb: 5
+planned_workspace_gb: 22.4
+currency: none
+note: No ROI, money saved, or labor displacement is claimed. Agent time is measured per run.

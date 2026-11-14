@@ -1,0 +1,17 @@
+.venv/
+.venv-before-move-*/
+__pycache__/
+*.pyc
+.env
+models/
+runtime/
+runs/
+logs/
+.cache/
+.tools/
+node_modules/
+data/index/
+data/scenarios/
+data/video/
+Plant 7.desktop
+.plant7-install.lock
